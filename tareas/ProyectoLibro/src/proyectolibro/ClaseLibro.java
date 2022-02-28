@@ -13,14 +13,16 @@ public class ClaseLibro {
  private String Autor;
  private String Editorial;
  private int paginas;
+ private String color;
  private String abierto;
  private String ocupandose;
 
-    public ClaseLibro(String Titulo, String Autor, String Editorial, int paginas, String abierto, String ocupandose) {
+    public ClaseLibro(String Titulo, String Autor, String Editorial, int paginas, String color, String abierto, String ocupandose) {
         this.Titulo = Titulo;
         this.Autor = Autor;
         this.Editorial = Editorial;
         this.paginas = paginas;
+        this.color = color;
         this.abierto = abierto;
         this.abierto = ocupandose;
     }
@@ -61,6 +63,13 @@ public class ClaseLibro {
         this.paginas = paginas;
     }
 
+        public String getcolor() {
+    return color;
+    }
+
+    public void setcolor(String color) {
+        this.color = color;
+    }
     public String getAbierto() {
         return abierto;
     }

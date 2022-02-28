@@ -30,6 +30,8 @@ public class ProyectoLibro {
         System.out.println ("La editorial es: " + principito.getEditorial());
         principito.setPaginas(96);
         System.out.println("El numero de paginas es: " + principito.getPaginas());
+        principito.setcolor("Azul");
+        System.out.println ("El libro es de color : " + principito.getcolor());
         principito.setabierto("Si");
         System.out.println("El libro " + principito.getAbierto() + " Esta abierto");
         principito.setocupandose("Si");
@@ -46,6 +48,8 @@ public class ProyectoLibro {
         System.out.println ("La editorial es: " + rebelion.getEditorial());
         rebelion.setPaginas(110);
         System.out.println("El numero de paginas es: " + rebelion.getPaginas());
+        rebelion.setcolor("Rojo");
+        System.out.println ("El libro es de color : " + rebelion.getcolor());
         rebelion.setabierto("No");
         System.out.println("El libro " + rebelion.getAbierto() + " Esta abierto");
         rebelion.setocupandose("No");
