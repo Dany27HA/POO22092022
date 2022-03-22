@@ -10,6 +10,9 @@ import ico.fes.componentes.Mouse;
 import ico.fes.componentes.Procesador;
 import ico.fes.componentes.Teclado;
 import ico.fes.herencia.Alumno;
+import ico.fes.herencia.Servidor;
+import ico.fes.herencia.polimorfismo.Animal;
+import ico.fes.herencia.polimorfismo.Perro;
 import javax.swing.JFrame;
 
 /**
@@ -64,5 +67,31 @@ public class ReutilizacionDeCodigo2209 {
         
         Alumno alu2 = new Alumno("123243244", "ICO", "José perex", 19);
         System.out.println(alu2);
+        
+        alu1.setNumeroCuenta("2323232323");
+        alu1.setEdad(19);
+        System.out.println(alu1);
+        
+        
+        System.out.println("-------Composición y herencia de la misma clase------");
+        Servidor server = new Servidor();
+        System.out.println(server);
+        
+        server.setNumeroTarjetaRed(2);
+        System.out.println(server);
+        server.setMarca("HP");
+        System.out.println(server);
+        server.setRaton(new Mouse("LG", "Optico"));
+        System.out.println(server);
+        server.getRaton().setMarca("Logitech");
+        
+       server.setPantalla(new Monitor("ASUS",12));
+       
+        
+        System.out.println("-----Ejemplo polmorfismo-----");
+        Perro dog = new Perro ("Bulldog","5 estrellas",4);
+        Animal animal1= new Animal(4);
+        dog.emitirSonido();
+        animal1.emitirSonido();
     }
 }
