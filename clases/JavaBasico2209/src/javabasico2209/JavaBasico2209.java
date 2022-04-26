@@ -5,6 +5,7 @@
 package javabasico2209;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 /**
  *
@@ -157,9 +158,61 @@ public class JavaBasico2209 {
             for(Alumno alumno: lista){
                 System.out.println(alumno.evaluarDesempenio());
             }
+        
+            ArrayList<Alumno> grupo2209= new ArrayList<Alumno>();    
+            grupo2209.add(new Alumno("99999", 2, 9.0f));
+            grupo2209.add(new Alumno("88888", 2, 8.0f));
+            grupo2209.add(new Alumno("77777", 2, 7.0f));
+            grupo2209.add(new Alumno("66666", 2, 6.0f));
+            grupo2209.add(new Alumno("55555", 2, 5.0f));
+            
+            for (Alumno alumno : grupo2209) {
+                System.out.println(alumno);
+            }
+                System.out.println("Agrgar sin elmiar, solo recorriendo");
+            grupo2209.add(2, new Alumno("81111", 3, 9.9f));
+            for (Alumno alumno : grupo2209) {
+                System.out.println(alumno);
+            }
+            
+            System.out.println("Sacfar algun dato especifico del arreglo");
+            Alumno tmp= grupo2209.get(3); //NC=88888
+            System.out.println("Alumno en index =1 :" + tmp);
+            
+            
+            System.out.println("Eliminar elemento del arreeglo");
+            Alumno tmp2= grupo2209.remove(3);
+            System.out.println("Elemento eliminado es = "+ tmp2);
+            
+            for (Alumno alumno : grupo2209) {
+                System.out.println(alumno);
+                
+            }
+            
+            System.out.println("Remplazar i-esimo elemento");
+            Alumno tmp3 = grupo2209.set(0, new Alumno("44444", 4, 4.0f));
+            System.out.println("El elemento sacado es= "+tmp3);
+            
+            for (Alumno alumno : grupo2209) {
+                System.out.println(alumno); 
+            }
+            //Excepciones
+            try {
+            System.out.println("-----Excepciones-----");
+            System.out.println(grupo2209.get(20));
+            } catch (Exception e) {
+                System.out.println("Error... revisa los indices");
+            }
+            
+            System.out.println("Fin del programa");
+            
+            
+            
+            
+            }
         }
     }
-}
+
 
     
 
