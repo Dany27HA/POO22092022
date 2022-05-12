@@ -6,7 +6,7 @@ package ico.fes;
 
 /**
  *
- * @author danny
+ * @author felipezarate
  */
 public class Foco {
     private String color;

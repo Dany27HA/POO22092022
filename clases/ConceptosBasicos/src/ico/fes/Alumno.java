@@ -6,28 +6,27 @@ package ico.fes;
 
 /**
  *
- * @author danny
+ * @author felipezarate
  */
-public class Alumno extends Persona{  // Hereda atributos y metodos 
-
+public class Alumno extends Persona {//Hereda atributos y metodos de la clase persona.
     private String numeroCuenta;
     private String carrera;
-    private String grupo;
+    private int grupo;
 
     public Alumno() {
     }
 
-    public Alumno(String numeroCuenta, String carrera, String grupo) {
+    public Alumno(String numeroCuenta, String carrera, int grupo) {
         this.numeroCuenta = numeroCuenta;
         this.carrera = carrera;
         this.grupo = grupo;
     }
 
-    public String getGrupo() {
+    public int getGrupo() {
         return grupo;
     }
 
-    public void setGrupo(String grupo) {
+    public void setGrupo(int grupo) {
         this.grupo = grupo;
     }
 
@@ -49,8 +48,12 @@ public class Alumno extends Persona{  // Hereda atributos y metodos
 
     @Override
     public String toString() {
-        return super.toString()+ "Alumno{" + "numeroCuenta=" + numeroCuenta + ", carrera=" + carrera + ", grupo=" + grupo + '}';
+        return super.toString() + "Alumno{" + "numeroCuenta=" + numeroCuenta + ", carrera=" + carrera + ", grupo=" + grupo + '}';
+    //Super: El que hereda
     }
- 
+    
+    
+            
+    
     
 }

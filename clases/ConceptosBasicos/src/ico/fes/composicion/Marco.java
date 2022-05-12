@@ -6,10 +6,9 @@ package ico.fes.composicion;
 
 /**
  *
- * @author danny
+ * @author felipezarate
  */
 public class Marco {
-    
     private String marca;
     private String material;
 
@@ -41,5 +40,6 @@ public class Marco {
     public String toString() {
         return "Marco{" + "marca=" + marca + ", material=" + material + '}';
     }
+    
     
 }

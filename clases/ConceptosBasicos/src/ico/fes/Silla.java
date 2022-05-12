@@ -8,7 +8,7 @@ import java.awt.Color;
 
 /**
  *
- * @author danny
+ * @author felipezarate
  */
 public class Silla {
     private String material;
@@ -37,6 +37,8 @@ public class Silla {
     public void setMaterial(String material) {
         this.material = material;
     }
+    
+    
     
     
 }

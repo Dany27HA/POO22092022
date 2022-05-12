@@ -6,10 +6,9 @@ package ico.fes.composicion;
 
 /**
  *
- * @author danny
+ * @author felipezarate
  */
 public class Pedal {
-
     private String marca;
     private String material;
 
@@ -41,7 +40,6 @@ public class Pedal {
     public String toString() {
         return "Pedal{" + "marca=" + marca + ", material=" + material + '}';
     }
-    
     
     
     

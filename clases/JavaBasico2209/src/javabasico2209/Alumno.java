@@ -1,23 +1,24 @@
+package javabasico2209;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package javabasico2209;
 
 /**
  *
- * @author danny
+ * @author felipezarate
  */
 public class Alumno {
-    private String numeroCuneta;
+    private String numeroCuenta;
     private int semestre;
     private float promedio;
 
     public Alumno() {
     }
 
-    public Alumno(String numeroCuneta, int semestre, float promedio) {
-        this.numeroCuneta = numeroCuneta;
+    public Alumno(String numeroCuenta, int semestre, float promedio) {
+        this.numeroCuenta = numeroCuenta;
         this.semestre = semestre;
         this.promedio = promedio;
     }
@@ -30,12 +31,12 @@ public class Alumno {
         this.promedio = promedio;
     }
 
-    public String getNumeroCuneta() {
-        return numeroCuneta;
+    public String getNumeroCuenta() {
+        return numeroCuenta;
     }
 
-    public void setNumeroCuneta(String numeroCuneta) {
-        this.numeroCuneta = numeroCuneta;
+    public void setNumeroCuenta(String numeroCuenta) {
+        this.numeroCuenta = numeroCuenta;
     }
 
     public int getSemestre() {
@@ -48,13 +49,15 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno{" + "numeroCuneta=" + numeroCuneta + ", semestre=" + semestre + ", promedio=" + promedio + '}';
+        return "Alumno{" + "numeroCuenta=" + numeroCuenta + ", semestre=" + semestre + ", promedio=" + promedio + '}';
+    }
+
+    public void estudiar(int minutos){
+        System.out.println("Estudiando ..." + minutos +"minutos");
     }
     
-    public void estudiar (int minutos){
-        System.out.println("Estudiando..."+ minutos + " minutos");
-    }
-    public String evaluarDesempenio(){
-        return this.promedio > 8.0f?"Sobresaa}liente":"Regular";
+    public String evaluarDesempeño(){
+    return this.promedio > 8.0f? "Sobresaliente":"Regular";
+    
     }
 }

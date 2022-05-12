@@ -6,9 +6,9 @@ package ico.fes;
 
 /**
  *
- * @author danny
+ * @author felipezarate
  */
-public class Persona { //Java Bean Es diferente a un Enterpise Java Bean
+public class Persona { //Java BEAN >> ES diferente a un Enterprise Java Bean
     private int edad;
     private String nombre;
 
@@ -33,18 +33,18 @@ public class Persona { //Java Bean Es diferente a un Enterpise Java Bean
     }
 
     public void setEdad(int edad) {
-        if (edad>=0 && edad <=120)
-        {
+        if(edad >= 0 && edad <= 120){
         this.edad = edad;
-        }
-        else{
+        }else{
             System.out.println("Valor fuera de rango");
         }
     }
 
     @Override
     public String toString() {
-        return "Persona{" + "edad=" + edad + ", nombre=" + nombre + '}';
+        return "Persona{" + "edad=" + edad + ", nombre=" + nombre + '}' ;
     }
+    
+    
     
 }

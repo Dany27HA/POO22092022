@@ -6,10 +6,10 @@ package ico.fes.composicion;
 
 /**
  *
- * @author danny
+ * @author felipezarate
  */
 public class Llanta {
-        private String marca;
+    private String marca;
     private int rodada;
 
     public Llanta() {
@@ -17,6 +17,14 @@ public class Llanta {
 
     public Llanta(String marca, int rodada) {
         this.marca = marca;
+        this.rodada = rodada;
+    }
+
+    public int getRodada() {
+        return rodada;
+    }
+
+    public void setRodada(int rodada) {
         this.rodada = rodada;
     }
 
@@ -28,17 +36,11 @@ public class Llanta {
         this.marca = marca;
     }
 
-    public int getRodada() {
-        return rodada;
-    }
-
-    public void setRodada(int rodada) {
-        this.rodada = rodada;
-    }
-
     @Override
     public String toString() {
         return "Llanta{" + "marca=" + marca + ", rodada=" + rodada + '}';
     }
-
+    
+    
+    
 }
