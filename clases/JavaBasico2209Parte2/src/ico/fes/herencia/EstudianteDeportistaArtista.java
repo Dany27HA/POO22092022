@@ -6,7 +6,7 @@ package ico.fes.herencia;
 
 /**
  *
- * @author felipezarate
+ * @author danny
  */
 public class EstudianteDeportistaArtista extends Persona implements Deportista,Artista{
     

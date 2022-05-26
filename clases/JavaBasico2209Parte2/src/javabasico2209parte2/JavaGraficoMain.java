@@ -10,7 +10,7 @@ import ico.fes.swing.VentanaSwing;
 
 /**
  *
- * @author felipezarate
+ * @author danny
  */
 public class JavaGraficoMain {
     
@@ -18,8 +18,11 @@ public class JavaGraficoMain {
         //Ventana ventana = new Ventana("Hola AWT ICO Fes Aragón");
         
         //VentanaVersion2 ventana= new VentanaVersion2();
-        VentanaSwing vs=new VentanaSwing();
-        System.out.println(System.getProperty("java.dir"));
+        
+        VentanaSwing vs = new VentanaSwing();
+        
+        System.out.println(System.getProperty("user.dir"));
+        
         
     }
     

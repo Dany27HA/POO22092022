@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author felipezarate
+ * @author danny
  */
 public class JavaBasico2209Parte2 {
 

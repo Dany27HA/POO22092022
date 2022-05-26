@@ -16,7 +16,7 @@ import java.awt.event.MouseListener;
 
 /**
  *
- * @author felipezarate
+ * @author danny
  */
 public class Ventana extends Frame implements MouseListener{
     

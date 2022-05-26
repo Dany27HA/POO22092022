@@ -14,7 +14,6 @@ import java.awt.event.ItemListener;
 public abstract class ItemAdapter implements ItemListener{
 
     @Override
-    public void itemStateChanged(ItemEvent ie) {
+    public void itemStateChanged(ItemEvent e) {
     }
-    
 }

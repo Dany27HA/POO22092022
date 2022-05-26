@@ -6,7 +6,7 @@ package ico.fes;
 
 /**
  *
- * @author felipezarate
+ * @author danny
  */
 //JAVA Bean(antes), POJO(ahora) Es diferente a los EJB Enterprise Java Beans
 public class Circulo implements Figura{

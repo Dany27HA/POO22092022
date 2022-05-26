@@ -6,12 +6,12 @@ package ico.fes.herencia;
 
 /**
  *
- * @author felipezarate
+ * @author danny
  */
 public class Persona {
         
-        protected String nombre;
-        protected int edad;
+    protected String nombre;
+    protected int edad;
 
     public Persona() {
     }
@@ -39,7 +39,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return nombre + "," + edad;
+        return nombre + ", " + edad ;
     }
         
         public void comer(){

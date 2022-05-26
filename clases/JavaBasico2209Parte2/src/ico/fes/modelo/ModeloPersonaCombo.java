@@ -4,18 +4,20 @@
  */
 package ico.fes.modelo;
 
+import ico.fes.db.PersonaDao;
 import ico.fes.herencia.Persona;
 import java.util.ArrayList;
 import javax.swing.ComboBoxModel;
 import javax.swing.event.ListDataListener;
+import org.sqlite.SQLiteException;
 
 /**
  *
  * @author danny
  */
 public class ModeloPersonaCombo implements ComboBoxModel<Persona> {
-    private ArrayList<Persona> datos;
-    private Persona selected;
+       private ArrayList<Persona> datos;
+       private Persona selected;
 
     public ModeloPersonaCombo() {
     }
@@ -32,10 +34,10 @@ public class ModeloPersonaCombo implements ComboBoxModel<Persona> {
     public void setDatos(ArrayList datos) {
         this.datos = datos;
     }
-
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
     @Override
-    public void setSelectedItem(Object o) {
-        this.selected= (Persona)o;
+    public void setSelectedItem(Object anItem) {
+         this.selected = (Persona)anItem;
     }
 
     @Override
@@ -45,6 +47,7 @@ public class ModeloPersonaCombo implements ComboBoxModel<Persona> {
 
     @Override
     public int getSize() {
+         //Regresará el numero de elementos a mostrar
         return datos.size();
     }
 
@@ -60,17 +63,30 @@ public class ModeloPersonaCombo implements ComboBoxModel<Persona> {
     @Override
     public void removeListDataListener(ListDataListener l) {
     }
+
     
-    public void consultarBaseDatos(){
-        //simular una consulta a una bd
-        datos=new ArrayList<Persona>();
-        datos.add(new Persona("Jose", 19));
-        datos.add(new Persona("María", 21));
-        datos.add(new Persona("Jesús", 33));
-        datos.add(new Persona("Diana", 22));
-    }
-    public void agregarPrsona (Persona p){
-        //insert a BD
+     public void consultarBaseDatos(){
+         //simular una consulta a una bd
+        PersonaDao pdao=new PersonaDao();
+        
+        try {
+            datos=pdao.obtenerTodo();
+        } catch (SQLiteException ex) {
+            ex.printStackTrace();
+        }
+     }  
+     
+    public void agregarPersona(Persona p) {
+        //Insert a BD
+        PersonaDao pdao=new PersonaDao();
         datos.add(p);
+        
+        try {
+            pdao.insertar(p);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
+    
 }
+

@@ -6,7 +6,7 @@ package ico.fes.herencia;
 
 /**
  *
- * @author felipezarate
+ * @author danny
  */
 public interface Deportista {
     

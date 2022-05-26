@@ -6,7 +6,7 @@ package ico.fes;
 
 /**
  *
- * @author felipezarate
+ * @author danny
  */
 public interface Figura {
     
